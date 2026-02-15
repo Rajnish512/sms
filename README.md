@@ -1,35 +1,53 @@
 # School Management System (SMS)
 
-A modern full-stack School Management System built using **Laravel 12** and the **Laravel React Starter Kit**. This system allows managing students, teachers, courses, and enrollments with a clean dashboard interface.
+🔗 **Live Demo:** https://mistyrose-lion-729162.hostingersite.com
+💻 **GitHub Repository:** https://github.com/Rajnish512/sms
+
+---
+
+## Overview
+
+A modern full-stack School Management System built using **Laravel 12** and the **Laravel React Starter Kit**. This application allows administrators to manage students, teachers, courses, and enrollments through a clean and responsive dashboard interface.
+
+This project demonstrates real-world full-stack development using modern Laravel and React architecture.
 
 ---
 
 ## Tech Stack
 
-Backend:
+### Backend
 
 * Laravel 12
 * PHP 8+
 * MySQL
+* Eloquent ORM
+* RESTful Controllers
 
-Frontend:
+### Frontend
 
 * React (Laravel Starter Kit)
 * Inertia.js
 * Vite
 * Tailwind CSS
 
+### Tools & Environment
+
+* Git & GitHub
+* Composer
+* Node.js & NPM
+
 ---
 
 ## Features
 
-* Dashboard with statistics
-* Student Management (Add, Edit, Delete)
+* Dashboard with real-time statistics
+* Student Management (Create, Read, Update, Delete)
 * Teacher Management
 * Course Management
-* Enrollment Management
-* Modern responsive UI
-* RESTful architecture
+* Enrollment Management (Student ↔ Course relationship)
+* Modal-based form UI
+* Clean and responsive layout
+* Full-stack integration using Inertia.js
 
 ---
 
@@ -42,10 +60,6 @@ Frontend:
 ### Students
 
 ![Students](screenshots/students.png)
-
-### Add Student
-
-![Add Student](screenshots/add-student.png)
 
 ### Teachers
 
@@ -61,7 +75,41 @@ Frontend:
 
 ---
 
-## Installation
+## Database Design
+
+This system uses relational database structure:
+
+* Students table
+* Teachers table
+* Courses table
+* Enrollments table (relationship table)
+
+Relationships:
+
+* One Teacher → Many Courses
+* One Student → Many Enrollments
+* One Course → Many Enrollments
+* Enrollment connects Student and Course
+
+---
+
+## Architecture
+
+Frontend (React + Inertia.js)
+↓
+Laravel Routes
+↓
+Controllers
+↓
+Eloquent Models
+↓
+MySQL Database
+
+This architecture ensures clean separation of concerns and maintainable code.
+
+---
+
+## Installation Guide
 
 Clone repository:
 
@@ -70,7 +118,7 @@ git clone https://github.com/Rajnish512/sms.git
 cd sms
 ```
 
-Install backend:
+Install backend dependencies:
 
 ```bash
 composer install
@@ -80,7 +128,7 @@ php artisan migrate
 php artisan serve
 ```
 
-Install frontend:
+Install frontend dependencies:
 
 ```bash
 npm install
@@ -89,15 +137,27 @@ npm run dev
 
 ---
 
-## Architecture
+## Key Technical Implementation
 
-React (Frontend)
-↓
-Inertia.js
-↓
-Laravel Controllers
-↓
-MySQL Database
+* Laravel MVC architecture
+* Eloquent ORM relationships
+* React component-based architecture
+* Inertia.js for seamless frontend-backend integration
+* RESTful routing
+* Form handling and validation
+* Modal-based CRUD operations
+
+---
+
+## Skills Demonstrated
+
+* Full-stack development
+* Laravel 12 development
+* React integration with Laravel
+* Database design and relationships
+* REST API design
+* Modern frontend architecture
+* Git version control
 
 ---
 
@@ -110,4 +170,4 @@ GitHub: https://github.com/Rajnish512
 
 ## Purpose
 
-This project demonstrates full-stack development skills using Laravel 12 and React Starter Kit, suitable for production-level applications.
+This project was developed to demonstrate production-level full-stack development skills using Laravel 12 and React Starter Kit, following modern development best practices.
